@@ -5,6 +5,14 @@ public class GameManager : MonoBehaviour
     static public GameManager instance;
     private int score;
 
+    public int Score
+    {
+        get
+        {
+            return score;
+        }
+    }
+
     void Awake()
     {
         if (instance == null)
