@@ -2,6 +2,8 @@
 
 public class SquatTrigger : MonoBehaviour
 {
+    [SerializeField] private SquatCounterEffect squatCounterEffect;
+
     //OnTriggerEnter関数
     void OnTriggerEnter(Collider other)
     {
@@ -11,6 +13,7 @@ public class SquatTrigger : MonoBehaviour
             Debug.Log("Enter");
             GetComponent<Renderer>().material.color = Color.blue;
             GameManager.instance.CountUp();
+            squatCounterEffect.GenerateUnchi();
         }
     }
 

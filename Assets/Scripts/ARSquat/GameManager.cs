@@ -3,14 +3,14 @@
 public class GameManager : MonoBehaviour
 {
     static public GameManager instance;
+
+    [SerializeField] private CounterTextEffect counterTextEffect;
+
     private int score;
 
     public int Score
     {
-        get
-        {
-            return score;
-        }
+        get { return score; }
     }
 
     void Awake()
@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public void CountUp()
     {
         Debug.Log("CountUp!");
+        counterTextEffect.InAnimation();
         score++;
     }
 
